@@ -72,7 +72,7 @@ class _MainPageState extends State<MainPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 TitleText(
-                  text: isHomePageSelected ? 'かわいい洋服が見つかる！' : '',
+                  text: isHomePageSelected ? 'かわいい洋服が見つかる！!' : '',
                   fontSize: 27,
                   fontWeight: FontWeight.w400,
                 ),
