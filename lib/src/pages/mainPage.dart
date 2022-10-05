@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce_app/src/pages/home_page.dart';
+import 'package:flutter_ecommerce_app/src/pages/product_detail.dart';
 import 'package:flutter_ecommerce_app/src/pages/shopping_cart_page.dart';
 import 'package:flutter_ecommerce_app/src/themes/light_color.dart';
 import 'package:flutter_ecommerce_app/src/themes/theme.dart';
 import 'package:flutter_ecommerce_app/src/widgets/BottomNavigationBar/bottom_navigation_bar.dart';
 import 'package:flutter_ecommerce_app/src/widgets/title_text.dart';
 import 'package:flutter_ecommerce_app/src/widgets/extentions.dart';
+import 'package:flutter_ecommerce_app/src/model/asobi.dart';
+import 'package:flutter_ecommerce_app/src/pages/login/login_screen.dart';
+import 'package:flutter_ecommerce_app/src/pages/camera.dart';
 
 class MainPage extends StatefulWidget {
   MainPage({Key key, this.title}) : super(key: key);
@@ -99,13 +103,33 @@ class _MainPageState extends State<MainPage> {
   }
 
   void onBottomIconPressed(int index) {
-    if (index == 0 || index == 1) {
+    if (index == 0) {
       setState(() {
         isHomePageSelected = true;
       });
-    } else {
+    } else if (index == 1) {
       setState(() {
         isHomePageSelected = false;
+      });
+    } else if (index == 2) {
+      setState(() {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => Camera(),
+            ));
+      });
+    } else if (index == 3) {
+      setState(() {
+        isHomePageSelected = false;
+      });
+    } else if (index == 4) {
+      setState(() {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => ProductDetailPage(),
+            ));
       });
     }
   }
@@ -160,24 +184,6 @@ class _MainPageState extends State<MainPage> {
               ),
             )
           ],
-        ),
-      ),
-    );
-  }
-
-  Widget _pressbutton(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('My App 1'),
-        ),
-        body: Container(
-          padding: EdgeInsets.all(30.0),
-          child: Column(
-            children: <Widget>[
-              Text('pao'),
-            ],
-          ),
         ),
       ),
     );

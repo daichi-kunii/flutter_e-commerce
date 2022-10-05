@@ -4,7 +4,7 @@ import 'package:flutter_ecommerce_app/src/model/product.dart';
 import 'package:flutter_ecommerce_app/src/themes/light_color.dart';
 import 'package:flutter_ecommerce_app/src/themes/theme.dart';
 import 'package:flutter_ecommerce_app/src/widgets/title_text.dart';
-import 'package:flutter_ecommerce_app/src/pages/login.dart';
+import 'package:flutter_ecommerce_app/src/pages/login/login_screen.dart';
 
 class ShoppingCartPage extends StatelessWidget {
   const ShoppingCartPage({Key key}) : super(key: key);

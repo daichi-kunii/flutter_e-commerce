@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce_app/src/model/data.dart';
+import 'package:flutter_ecommerce_app/src/model/asobi.dart';
 import 'package:flutter_ecommerce_app/src/themes/light_color.dart';
 import 'package:flutter_ecommerce_app/src/themes/theme.dart';
 import 'package:flutter_ecommerce_app/src/widgets/title_text.dart';
 import 'package:flutter_ecommerce_app/src/widgets/extentions.dart';
-import 'package:flutter_ecommerce_app/src/pages/login.dart';
+import 'package:flutter_ecommerce_app/src/pages/login/login_screen.dart';
 
 class ProductDetailPage extends StatefulWidget {
   ProductDetailPage({Key key}) : super(key: key);
@@ -125,6 +126,19 @@ class _ProductDetailPageState extends State<ProductDetailPage>
   }
 
   Widget _categoryWidget() {
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 0),
+      width: AppTheme.fullWidth(context),
+      height: 80,
+      child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children:
+              AppData.showThumbnailList.map((x) => _thumbnail(x)).toList()),
+    );
+  }
+
+  Widget _asobiWidget() {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 0),
       width: AppTheme.fullWidth(context),
@@ -370,6 +384,24 @@ class _ProductDetailPageState extends State<ProductDetailPage>
           color: Theme.of(context).floatingActionButtonTheme.backgroundColor),
     );
   }
+  //國井追加→ボタン作成したが表示されない//
+  // Widget _pressbutton(BuildContext context) {
+  //   return MaterialApp(
+  //     home: Scaffold(
+  //       appBar: AppBar(
+  //         title: Text('My App 1'),
+  //       ),
+  //       body: Container(
+  //         padding: EdgeInsets.all(30.0),
+  //         child: Column(
+  //           children: <Widget>[
+  //             Text('pao'),
+  //           ],
+  //         ),
+  //       ),
+  //     ),
+  //   );
+  // }
 
   @override
   Widget build(BuildContext context) {

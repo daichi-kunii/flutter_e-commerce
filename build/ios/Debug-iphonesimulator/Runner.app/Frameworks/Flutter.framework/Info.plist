@@ -23,8 +23,15 @@
   <key>MinimumOSVersion</key>
   <string>11.0</string>
   <key>FlutterEngine</key>
-  <string>69b981ecac6746f78ff962b193e6fa7d459620f5</string>
+  <string>83c68740e3b7b677b6c507aa81c33750b75ea206</string>
   <key>ClangVersion</key>
   <string>b'Apple clang version 13.0.0 (clang-1300.0.29.3)'</string>
+
+<!-- 以下カメラのために追加 -->
+  <key>NSCameraUsageDescription</key>
+	<string>カメラを使う理由・用途を記述（ここをちゃんと書かないと、Appleのレビューでリジェクトされます）</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>マイクを使う理由・用途を記述（ここをちゃんと書かないと、Appleのレビューでリジェクトされます）</string>
+
 </dict>
 </plist>

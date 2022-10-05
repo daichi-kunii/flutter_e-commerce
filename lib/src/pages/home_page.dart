@@ -1,11 +1,15 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_ecommerce_app/src/model/category.dart';
 import 'package:flutter_ecommerce_app/src/model/data.dart';
+import 'package:flutter_ecommerce_app/src/model/asobi.dart';
 import 'package:flutter_ecommerce_app/src/themes/light_color.dart';
 import 'package:flutter_ecommerce_app/src/themes/theme.dart';
 import 'package:flutter_ecommerce_app/src/widgets/product_card.dart';
 import 'package:flutter_ecommerce_app/src/widgets/product_icon.dart';
+import 'package:flutter_ecommerce_app/src/widgets/asobi_icon.dart';
 import 'package:flutter_ecommerce_app/src/widgets/extentions.dart';
+import 'package:flutter_ecommerce_app/src/pages/login/login_screen.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -53,6 +57,58 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             )
             .toList(),
+      ),
+    );
+  }
+
+  Widget _asobiWidget() {
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 10),
+      width: AppTheme.fullWidth(context),
+      height: 80,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: AppData.asobiList
+            .map(
+              (asobi) => AsobiIcon(
+                model: asobi,
+                onSelected: (model) {
+                  setState(() {
+                    AppData.asobiList.forEach((item) {
+                      item.isSelected = false;
+                    });
+                    model.isSelected = true;
+                  });
+                },
+              ),
+            )
+            .toList(),
+      ),
+    );
+  }
+
+  Widget _buttonWidget() {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => LoginScreen()),
+        );
+      },
+      child: Ink(
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            colors: [Colors.red, Colors.purple, Colors.blue],
+          ),
+          borderRadius: BorderRadius.circular(4),
+        ),
+        child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+          child: const Text('ログインページへ'),
+        ),
+      ),
+      style: ElevatedButton.styleFrom(
+        padding: EdgeInsets.zero,
       ),
     );
   }
@@ -132,7 +188,9 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             _search(),
             _categoryWidget(),
+            _asobiWidget(),
             _productWidget(),
+            _buttonWidget(),
           ],
         ),
       ),
