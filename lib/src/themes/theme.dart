@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'light_color.dart';
 
 class AppTheme {
@@ -14,6 +13,13 @@ class AppTheme {
       dividerColor: LightColor.lightGrey,
       primaryTextTheme:
           TextTheme(bodyText1: TextStyle(color: LightColor.titleTextColor)));
+
+  static ThemeData darkTheme = ThemeData(
+    scaffoldBackgroundColor: Colors.grey.shade900,
+    primaryColorDark: LightColor.black,
+    colorScheme: ColorScheme.dark(primary: Colors.black),
+    dividerColor: Colors.white,
+  );
 
   static TextStyle titleStyle =
       const TextStyle(color: LightColor.titleTextColor, fontSize: 16);
