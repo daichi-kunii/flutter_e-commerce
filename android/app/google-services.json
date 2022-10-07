@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "624118247102",
+    "project_id": "flutterecommerceapp-a3495",
+    "storage_bucket": "flutterecommerceapp-a3495.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624118247102:android:d0136f9dcab252b543b8ef",
+        "android_client_info": {
+          "package_name": "com.saikouchiku.pet_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "624118247102-0o7aq8vsbmu6ae52u8ljgnl6v2343pdc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxT3SJdF9xES97QmWTUrT_UAhbnwZKTbM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "624118247102-0o7aq8vsbmu6ae52u8ljgnl6v2343pdc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,4 +1,10 @@
 # This is a generated file; do not edit or check into version control.
+cloud_firestore=/Users/kuniidaichi/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-3.5.0/
+cloud_firestore_web=/Users/kuniidaichi/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-2.8.9/
+firebase_auth=/Users/kuniidaichi/.pub-cache/hosted/pub.dartlang.org/firebase_auth-3.11.1/
+firebase_auth_web=/Users/kuniidaichi/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-4.6.0/
+firebase_core=/Users/kuniidaichi/.pub-cache/hosted/pub.dartlang.org/firebase_core-1.24.0/
+firebase_core_web=/Users/kuniidaichi/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-1.7.3/
 flutter_native_splash=/Users/kuniidaichi/.pub-cache/hosted/pub.dartlang.org/flutter_native_splash-2.2.10+1/
 flutter_plugin_android_lifecycle=/Users/kuniidaichi/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-2.0.7/
 image_picker=/Users/kuniidaichi/.pub-cache/hosted/pub.dartlang.org/image_picker-0.8.5+3/

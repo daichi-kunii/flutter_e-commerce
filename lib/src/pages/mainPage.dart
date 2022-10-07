@@ -10,6 +10,8 @@ import 'package:flutter_ecommerce_app/src/widgets/extentions.dart';
 import 'package:flutter_ecommerce_app/src/model/asobi.dart';
 import 'package:flutter_ecommerce_app/src/pages/login/login_screen.dart';
 import 'package:flutter_ecommerce_app/src/pages/camera.dart';
+import 'package:flutter_ecommerce_app/src/pages/register.dart';
+import 'package:flutter_ecommerce_app/src/pages/profile/profile.dart';
 
 class MainPage extends StatefulWidget {
   MainPage({Key key, this.title}) : super(key: key);
@@ -109,7 +111,12 @@ class _MainPageState extends State<MainPage> {
       });
     } else if (index == 1) {
       setState(() {
-        isHomePageSelected = false;
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => ProfilePage(),
+              fullscreenDialog: true,
+            ));
       });
     } else if (index == 2) {
       setState(() {
@@ -117,6 +124,7 @@ class _MainPageState extends State<MainPage> {
             context,
             MaterialPageRoute(
               builder: (context) => Camera(),
+              fullscreenDialog: true,
             ));
       });
     } else if (index == 3) {
@@ -128,7 +136,7 @@ class _MainPageState extends State<MainPage> {
         Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => ProductDetailPage(),
+              builder: (context) => MyAuthPage(),
             ));
       });
     }

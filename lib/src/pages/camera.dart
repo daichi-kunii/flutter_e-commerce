@@ -31,11 +31,13 @@ class _CameraPage extends State<Camera> {
           'カメラ',
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Colors.cyan,
+        backgroundColor: Colors.orange,
       ),
       body: Center(
         // imageがnullだったら写真を撮る
-        child: _image == null ? Text('写真を撮る') : Image.file(_image),
+        child: _image == null
+            ? Text('Take a cute dog photo🐶')
+            : Image.file(_image),
       ),
       // floatingActionButtonLocationでボタンの位置を指定します
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -47,7 +49,7 @@ class _CameraPage extends State<Camera> {
           color: Colors.white,
         ),
         // アイコンの背景の色を指定
-        backgroundColor: Colors.cyan,
+        backgroundColor: Colors.orange,
       ),
     );
   }
