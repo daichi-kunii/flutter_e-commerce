@@ -9,9 +9,9 @@
     },
     {
       "name": "animated_theme_switcher",
-      "rootUri": "file:///Users/kuniidaichi/.pub-cache/hosted/pub.dartlang.org/animated_theme_switcher-2.0.6",
+      "rootUri": "file:///Users/kuniidaichi/.pub-cache/hosted/pub.dartlang.org/animated_theme_switcher-1.0.9",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "2.2"
     },
     {
       "name": "archive",
@@ -350,7 +350,7 @@
       "languageVersion": "2.6"
     }
   ],
-  "generated": "2022-10-07T06:17:20.711780Z",
+  "generated": "2022-10-09T02:10:08.026710Z",
   "generator": "pub",
   "generatorVersion": "2.19.0-268.0.dev"
 }

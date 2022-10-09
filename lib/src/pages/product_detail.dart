@@ -384,24 +384,6 @@ class _ProductDetailPageState extends State<ProductDetailPage>
           color: Theme.of(context).floatingActionButtonTheme.backgroundColor),
     );
   }
-  //國井追加→ボタン作成したが表示されない//
-  // Widget _pressbutton(BuildContext context) {
-  //   return MaterialApp(
-  //     home: Scaffold(
-  //       appBar: AppBar(
-  //         title: Text('My App 1'),
-  //       ),
-  //       body: Container(
-  //         padding: EdgeInsets.all(30.0),
-  //         child: Column(
-  //           children: <Widget>[
-  //             Text('pao'),
-  //           ],
-  //         ),
-  //       ),
-  //     ),
-  //   );
-  // }
 
   @override
   Widget build(BuildContext context) {

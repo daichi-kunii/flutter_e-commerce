@@ -115,7 +115,7 @@ class ShoppingCartPage extends StatelessWidget {
           width: AppTheme.fullWidth(context) * .7,
           child: TitleText(
             text: 'Next',
-            color: LightColor.background,
+            color: Colors.orange,
             fontWeight: FontWeight.w500,
           ),
         ));

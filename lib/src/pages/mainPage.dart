@@ -65,7 +65,13 @@ class _MainPageState extends State<MainPage> {
         icon,
         color: color,
       ),
-    ).ripple(() {}, borderRadius: BorderRadius.all(Radius.circular(13)));
+    ).ripple(() {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => LoginScreen(),
+          ));
+    }, borderRadius: BorderRadius.all(Radius.circular(13)));
   }
 
   Widget _title() {
@@ -136,7 +142,7 @@ class _MainPageState extends State<MainPage> {
         Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => MyAuthPage(),
+              builder: (context) => LoginScreen(),
             ));
       });
     }

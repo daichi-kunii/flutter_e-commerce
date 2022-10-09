@@ -11,12 +11,6 @@ class MyAuthPage extends StatefulWidget {
   _MyAuthPageState createState() => _MyAuthPageState();
 }
 
-main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-  runApp(MyApp());
-}
-
 @override
 Widget build(BuildContext context) {
   return MaterialApp(
