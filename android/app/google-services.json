@@ -29,6 +29,13 @@
             {
               "client_id": "624118247102-0o7aq8vsbmu6ae52u8ljgnl6v2343pdc.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "624118247102-h4mus9kb25gm1guf3gu23dgo1u0ef4ml.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.thealphamerc.flutterEcommerceApp"
+              }
             }
           ]
         }

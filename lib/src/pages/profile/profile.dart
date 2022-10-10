@@ -7,7 +7,7 @@ import 'package:flutter_ecommerce_app/src/pages/profile/profile_button_widget.da
 import 'package:flutter_ecommerce_app/src/pages/profile/profile_numbers_widget.dart';
 import 'package:flutter_ecommerce_app/src/pages/profile/profile_widget.dart';
 import 'package:flutter_ecommerce_app/src/pages/profile/profile_edit.dart';
-import 'package:animated_theme_switcher/animated_theme_switcher.dart';
+// import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -18,14 +18,14 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     final user = UserPreferences.myUser;
-
-    return ThemeSwitchingArea(
+    return SafeArea(
       child: Builder(
         builder: (context) => Scaffold(
-          appBar: buildAppBar(context),
+          // appBar: buildAppBar(context),
           body: ListView(
             physics: BouncingScrollPhysics(),
             children: [
+              // Icon(Icons.chevron_left),
               ProfileWidget(
                 imagePath: user.imagePath,
                 onClicked: () {

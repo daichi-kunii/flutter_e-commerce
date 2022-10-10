@@ -15,7 +15,6 @@ import 'package:flutter_ecommerce_app/src/pages/profile/profile.dart';
 
 class MainPage extends StatefulWidget {
   MainPage({Key key, this.title}) : super(key: key);
-
   final String title;
 
   @override
@@ -48,7 +47,14 @@ class _MainPageState extends State<MainPage> {
               ),
               child: Image.asset("assets/user.png"),
             ),
-          ).ripple(() {}, borderRadius: BorderRadius.all(Radius.circular(13)))
+          ).ripple(() {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ProfilePage(),
+                  fullscreenDialog: true,
+                ));
+          }, borderRadius: BorderRadius.all(Radius.circular(13)))
         ],
       ),
     );
@@ -66,11 +72,7 @@ class _MainPageState extends State<MainPage> {
         color: color,
       ),
     ).ripple(() {
-      Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => LoginScreen(),
-          ));
+      // メニュータブを表示する
     }, borderRadius: BorderRadius.all(Radius.circular(13)));
   }
 
@@ -135,7 +137,11 @@ class _MainPageState extends State<MainPage> {
       });
     } else if (index == 3) {
       setState(() {
-        isHomePageSelected = false;
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => MyAuthPage(),
+            ));
       });
     } else if (index == 4) {
       setState(() {
@@ -143,6 +149,7 @@ class _MainPageState extends State<MainPage> {
             context,
             MaterialPageRoute(
               builder: (context) => LoginScreen(),
+              fullscreenDialog: true,
             ));
       });
     }
