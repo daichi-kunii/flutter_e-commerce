@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce_app/main.dart';
 import 'package:flutter_ecommerce_app/src/pages/home_page.dart';
 import 'package:flutter_ecommerce_app/src/pages/mainPage.dart';
+import 'package:flutter_ecommerce_app/src/pages/profile/profile.dart';
 
 class MyAuthPage extends StatefulWidget {
   @override
@@ -16,7 +17,7 @@ Widget build(BuildContext context) {
   return MaterialApp(
     title: 'Flutter Demo',
     theme: ThemeData(
-      primarySwatch: Colors.blue,
+      primarySwatch: Colors.orange,
     ),
     home: MyAuthPage(),
   );
@@ -59,9 +60,7 @@ class _MyAuthPageState extends State<MyAuthPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('ユーザー登録'),
-      ),
+      appBar: AppBar(title: const Text('ユーザー登録')),
       // キーボードで隠れて、黄色エラーが出るので
       // SingleChildScrollViewで、Centerウイジットをラップする
       body: SingleChildScrollView(
@@ -76,7 +75,7 @@ class _MyAuthPageState extends State<MyAuthPage> {
                   radius: 75,
                   // images.unsplash.comの画像のパスを貼り付ける
                   backgroundImage: NetworkImage(
-                      'https://images.unsplash.com/photo-1658033014478-cc3b36e31a5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60'),
+                      'https://upload.wikimedia.org/wikipedia/commons/f/f1/Pomeranian-tb.png'),
                 ),
                 const SizedBox(height: 40),
                 TextFormField(
@@ -124,6 +123,12 @@ class _MyAuthPageState extends State<MyAuthPage> {
                         infoText = "登録NG:${e.toString()}";
                       });
                     }
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProfilePage(),
+                          fullscreenDialog: true,
+                        ));
                   },
                   child: Text("ユーザー登録"),
                 ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecommerce_app/src/pages/register.dart';
 
 class LoginFooterWidget extends StatelessWidget {
   const LoginFooterWidget({
@@ -23,7 +24,13 @@ class LoginFooterWidget extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => MyAuthPage(),
+                ));
+          },
           child: Text.rich(
             TextSpan(
                 text: 'DontHaveAnAccount',
